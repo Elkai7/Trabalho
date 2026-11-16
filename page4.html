@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maré Justa | Campanha de Conscientização</title>
+    <link rel="stylesheet" href="page4.css">
+</head>
+<body>
+
+    <header class="topo">
+        <nav class="barra" aria-label="Navegação principal">
+            <a href="index.html" class="marca"><img src="logotipo.png" alt="Maré Justa"></a>
+            <button class="menu-botao" id="menuBotao" aria-expanded="false" aria-controls="menuLinks" aria-label="Abrir menu">☰</button>
+            <ul class="links" id="menuLinks">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="page2.html">Projeto</a></li>
+                <li><a href="page3.html">Ecossistema</a></li>
+                <li><a href="#campanha" class="ativo">Campanha</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="integrantes.html">integrantes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="capa">
+        <div class="capa-texto">
+            <p class="selo">Tarefa #3 · Engajamento e conscientização</p>
+            <h1>O mar devolve o que a gente escolhe dar.</h1>
+            <p class="capa-sub">Uma campanha da Maré Justa para colaboradores, clientes e vizinhos do entorno: pequenas escolhas à mesa e na cozinha que mantêm o pescado com origem e futuro.</p>
+            <a href="#compromisso" class="botao">Fazer meu compromisso</a>
+        </div>
+        <svg class="capa-onda" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0,70 C240,130 480,10 720,60 C960,110 1200,20 1440,70 L1440,140 L0,140 Z"></path>
+        </svg>
+    </section>
+
+    <main id="campanha">
+
+        <!-- PÚBLICO E ESCOPO -->
+        <section class="bloco">
+            <div class="miolo duas-colunas">
+                <div>
+                    <h2>Para quem é a campanha</h2>
+                    <p>A Maré Justa serve peixe todos os dias, então depende de um mar saudável todos os dias. A campanha funciona em dois níveis: o que cada pessoa pode fazer sozinha e o que só dá certo quando a gente faz junto.</p>
+                </div>
+                <div class="abas" role="tablist" aria-label="Nível da campanha">
+                    <div class="abas-botoes">
+                        <button role="tab" aria-selected="true" aria-controls="painel-ind" id="aba-ind" class="aba">Individual</button>
+                        <button role="tab" aria-selected="false" aria-controls="painel-col" id="aba-col" class="aba" tabindex="-1">Coletivo</button>
+                    </div>
+                    <div role="tabpanel" id="painel-ind" aria-labelledby="aba-ind" class="painel">
+                        <h3>O que eu faço</h3>
+                        <ul>
+                            <li>Escolho pescado da época e com origem informada.</li>
+                            <li>Peço só o que vou comer e levo as sobras.</li>
+                            <li>Separo o lixo e uso copo e sacola reutilizáveis.</li>
+                        </ul>
+                    </div>
+                    <div role="tabpanel" id="painel-col" aria-labelledby="aba-col" class="painel" hidden>
+                        <h3>O que fazemos juntos</h3>
+                        <ul>
+                            <li><strong>Colaboradores:</strong> metas de redução de descarte na cozinha e no salão.</li>
+                            <li><strong>Clientes:</strong> desconto para quem traz recipiente próprio.</li>
+                            <li><strong>Comunidade:</strong> mutirão de limpeza de margem e praia.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLOGANS -->
+        <section class="bloco fundo-azul">
+            <div class="miolo">
+                <h2>Slogans da campanha</h2>
+                <p class="intro">Ideias geradas com apoio de IA e escolhidas pelo grupo. Clique em um slogan para destacá-lo.</p>
+                <div class="slogan-palco" aria-live="polite">
+                    <p class="slogan-grande" id="sloganGrande">Pescado com origem. Mar com futuro.</p>
+                    <button class="botao-claro" id="copiarSlogan" type="button">Copiar slogan</button>
+                </div>
+                <ul class="slogans" id="listaSlogans">
+                    <li><button type="button" class="slogan-item ativo">Pescado com origem. Mar com futuro.</button></li>
+                    <li><button type="button" class="slogan-item">Prato limpo, mar limpo.</button></li>
+                    <li><button type="button" class="slogan-item">Sua escolha chega até a maré.</button></li>
+                    <li><button type="button" class="slogan-item">Peça o que vai comer, devolva o resto ao ciclo.</button></li>
+                    <li><button type="button" class="slogan-item">Pesca justa começa no seu pedido.</button></li>
+                    <li><button type="button" class="slogan-item">Quem cuida do mar sempre volta pra mesa.</button></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- COMPROMISSO INTERATIVO -->
+        <section class="bloco" id="compromisso">
+            <div class="miolo duas-colunas centro">
+                <div>
+                    <h2>Programa de incentivo: Cartão Maré</h2>
+                    <p>Colaboradores e clientes marcam as ações que assumem. Cada compromisso sobe o nível da maré. Ao fechar o ciclo do mês, quem completa metade ou mais ganha um benefício na casa.</p>
+                    <ul class="checklist" id="checklist">
+                        <li><label><input type="checkbox" data-peso="1"> Trouxe meu próprio recipiente</label></li>
+                        <li><label><input type="checkbox" data-peso="1"> Recusei canudo e descartável</label></li>
+                        <li><label><input type="checkbox" data-peso="1"> Escolhi pescado da época</label></li>
+                        <li><label><input type="checkbox" data-peso="1"> Separei o lixo reciclável</label></li>
+                        <li><label><input type="checkbox" data-peso="1"> Pedi só o que ia comer</label></li>
+                        <li><label><input type="checkbox" data-peso="1"> Levei as sobras para casa</label></li>
+                        <li><label><input type="checkbox" data-peso="1"> Compartilhei a campanha</label></li>
+                        <li><label><input type="checkbox" data-peso="1"> Participei do mutirão</label></li>
+                    </ul>
+                    <button type="button" class="botao-contorno" id="limparCartao">Limpar cartão</button>
+                </div>
+                <div class="medidor" role="img" aria-label="Nível da maré do compromisso">
+                    <div class="circulo">
+                        <div class="agua" id="agua"></div>
+                        <div class="medida"><strong id="percentual">0%</strong><span id="mensagemNivel">Marque sua primeira ação</span></div>
+                    </div>
+                    <p class="beneficio" id="beneficio">Faltam 4 ações para o benefício do mês.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- REDES SOCIAIS -->
+        <section class="bloco fundo-areia">
+            <div class="miolo">
+                <h2>Roteiro para as redes sociais</h2>
+                <p class="intro">Quatro semanas, uma ideia por semana, publicadas no Instagram e no TikTok com a hashtag <strong>#MaréJusta</strong>.</p>
+                <div class="abas-semana" role="tablist" aria-label="Semanas da campanha">
+                    <button class="semana-botao" role="tab" aria-selected="true" data-semana="0">Semana 1</button>
+                    <button class="semana-botao" role="tab" aria-selected="false" data-semana="1">Semana 2</button>
+                    <button class="semana-botao" role="tab" aria-selected="false" data-semana="2">Semana 3</button>
+                    <button class="semana-botao" role="tab" aria-selected="false" data-semana="3">Semana 4</button>
+                </div>
+                <article class="semana-painel" id="semanaPainel" aria-live="polite"></article>
+            </div>
+        </section>
+
+        <!-- AÇÃO COMUNITÁRIA -->
+        <section class="bloco">
+            <div class="miolo">
+                <h2>Ação comunitária: Mutirão Maré Limpa</h2>
+                <p class="intro">Uma manhã de limpeza de margem ou praia perto do restaurante, aberta a quem mora e trabalha na região.</p>
+                <ol class="etapas">
+                    <li><h3>Antes</h3><p>Convite no balcão, nas redes e com associações de bairro. Inscrição por QR code.</p></li>
+                    <li><h3>No dia</h3><p>Luvas, sacos e baldes fornecidos. Lixo separado e pesado por categoria.</p></li>
+                    <li><h3>Depois</h3><p>Café da manhã para os voluntários e divulgação do total recolhido.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- METAS -->
+        <section class="bloco fundo-azul">
+            <div class="miolo">
+                <h2>Como vamos medir</h2>
+                <div class="metas">
+                    <div><strong>30%</strong><span>menos descartáveis em 3 meses</span></div>
+                    <div><strong>100</strong><span>clientes com recipiente próprio por mês</span></div>
+                    <div><strong>40</strong><span>voluntários no primeiro mutirão</span></div>
+                    <div><strong>5 mil</strong><span>pessoas alcançadas nas redes</span></div>
+                </div>
+                <p class="nota">As metas são propostas do grupo e devem ser ajustadas depois do primeiro mês de campanha.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <img src="logotipo.png" alt="Maré Justa" class="rodape-logo">
+        <p>Kaique F. · Marcos V. · Ian H. · Nickolas S. · Gabriel N. · Cristhian J.</p>
+        <p class="creditos">© 2026 Ds. Trabalho — Todos os direitos reservados.</p>
+        <a href="#campanha" class="voltar-topo">Voltar ao topo</a>
+    </footer>
+
+    <script src="page4.js"></script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff8f0;
+    color: #333;
+}
+
+.cabecalho {
+    padding: 30px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #b71c1c, #f4511e);
+    border-bottom: 5px solid #ffb74d;
+}
+
+.cabecalho h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.cabecalho p {
+    color: #fff3e0;
+}
+
+.container {
+    flex: 1;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.cartao {
+    padding: 35px;
+    background: white;
+    border-left: 6px solid #f4511e;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(80, 40, 10, 0.12);
+    animation: aparecer 0.5s ease;
+}
+
+.icone {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cartao h2 {
+    color: #c62828;
+    font-size: 28px;
+    text-align: center;
+}
+
+.descricao {
+    margin: 12px 0 25px;
+    text-align: center;
+    color: #666;
+    line-height: 1.6;
+}
+
+form label {
+    display: block;
+    margin: 16px 0 7px;
+    font-weight: bold;
+    color: #444;
+}
+
+form input:not([type="radio"]),
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fffdf9;
+    font: inherit;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: 2px solid #ffb74d;
+    border-color: #f4511e;
+}
+
+.estrelas {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 5px;
+    margin: 12px 0;
+}
+
+.estrelas input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.estrelas label {
+    margin: 0;
+    font-size: 38px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.estrelas label:hover,
+.estrelas label:hover ~ label,
+.estrelas input:checked ~ label {
+    color: #ffb300;
+}
+
+.estrelas input:focus-visible + label {
+    outline: 2px solid #c62828;
+    outline-offset: 3px;
+}
+
+form button,
+.confirmacao button {
+    width: 100%;
+    margin-top: 24px;
+    padding: 14px;
+    color: white;
+    background: linear-gradient(135deg, #c62828, #f4511e);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover,
+.confirmacao button:hover {
+    background: #9f1d1d;
+    transform: translateY(-2px);
+}
+
+.confirmacao {
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.sucesso {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-size: 35px;
+}
+
+.confirmacao h3 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.confirmacao p {
+    color: #666;
+}
+
+.rodape {
+    padding: 25px 15px;
+    text-align: center;
+    background: #252525;
+    color: white;
+    border-top: 5px solid #f4511e;
+}
+
+.rodape a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #ffb74d;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Mensagem de sucesso */
+.sucesso-envio {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+/* Mensagem de erro */
+.erro-envio {
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+/* Botão durante o envio */
+form button:disabled {
+    opacity: 0.7;
+    cursor: wait;
+    transform: none;
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 25px 15px;
+    }
+
+    .cartao {
+        padding: 25px 20px;
+    }
+
+    .cartao h2 {
+        font-size: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
